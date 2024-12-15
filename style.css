@@ -71,7 +71,7 @@ div[data-testid="stVerticalBlockBorderWrapper"] {
     background: linear-gradient(to right, rgb(75, 159, 255) 0%, rgb(75, 159, 255) 75%, rgba(151, 166, 195, 0.25) 75%, rgba(151, 166, 195, 0.25) 100%);
 }
 .st-df {
-    background: linear-gradient(to right, rgb(75, 159, 255) 0%, rgb(75, 159, 255) 75%, rgba(151, 166, 195, 0.25) 75%, rgba(151, 166, 195, 0.25) 100%);
+    background: linear-gradient(to right, rgb(75, 159, 255) 0%, rgb(75, 159, 255) 25%, rgba(151, 166, 195, 0.25) 25%, rgba(151, 166, 195, 0.25) 100%);
 }
 .st-dg {
     background: linear-gradient(to right, rgb(75, 159, 255) 0%, rgb(75, 159, 255) 50%, rgba(151, 166, 195, 0.25) 50%, rgba(151, 166, 195, 0.25) 100%);
@@ -83,7 +83,7 @@ div[data-testid="stVerticalBlockBorderWrapper"] {
     background: linear-gradient(to right, rgb(75, 159, 255)0%, rgb(75, 159, 255) 25%, rgba(151, 166, 195, 0.25) 25%, rgba(151, 166, 195, 0.25) 100%);
 }
 .st-dh {
-    background: linear-gradient(to right, rgb(75, 159, 255)0%, rgb(75, 159, 255) 25%, rgba(151, 166, 195, 0.25) 25%, rgba(151, 166, 195, 0.25) 100%);
+    background: linear-gradient(to right, rgb(75, 159, 255)0%, rgb(75, 159, 255) 75%, rgba(151, 166, 195, 0.25) 75%, rgba(151, 166, 195, 0.25) 100%);
 }
 .st-dm {
     background: linear-gradient(to right, rgb(75, 159, 255)) 0%,rgb(75, 159, 255) 0%, rgba(151, 166, 195, 0.25) 0%, rgba(151, 166, 195, 0.25) 100%);
