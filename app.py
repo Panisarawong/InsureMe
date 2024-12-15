@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 
-with open("asset/style.css", encoding="UTF-8") as f:
+with open("style.css", encoding="UTF-8") as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
