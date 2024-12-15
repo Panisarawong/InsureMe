@@ -8,7 +8,7 @@ with open("style.css", encoding="UTF-8") as f:
 insurance_products = pd.read_excel('product.xlsx')
 
 st.title("InsureMe")
-st.subheader("คัดสรรห์แผนประกันการเดินทางที่เหมาะกับคุณ")
+st.subheader("จับคู่แผนประกันการเดินทางที่เหมาะกับคุณ")
 st.markdown("<b>กรุณากรอกข้อมูลเพื่อค้นหาแผนประกัน</b>", unsafe_allow_html=True)
 # input
 customers = {}
