@@ -7,10 +7,10 @@ with open("style.css", encoding="UTF-8") as f:
 
 
 insurance_products = pd.read_excel('product.xlsx')
-<p> เว็บไซต์ประเมินกรมธรรม์ประกันการเดินทาง </p>
+st.markdown(f"""<div><p> เว็บไซต์ประเมินกรมธรรม์ประกันการเดินทาง </p></div>""", unsafe_allow_html=True)
 st.title("InsureMe")
 st.subheader("คัดสรรห์แผนประกันการเดินทางที่เหมาะกับคุณ")
-<h5>กรุณากรอกข้อมูลเพื่อค้นหาแผนประกัน</h5>
+st.markdown(f"""<div><h5>กรุณากรอกข้อมูลเพื่อค้นหาแผนประกัน</h5></div>""", unsafe_allow_html=True)
 # input
 customers = {}
 name = st.text_input("กรุณากรอกชื่อของคุณ ")
