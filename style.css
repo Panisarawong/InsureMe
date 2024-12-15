@@ -1,0 +1,91 @@
+/* เพิ่มฟอนต์ Sarabun จาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+/* กำหนดฟอนต์ให้กับ title และ subheader */
+h1, h3, p, h5 {
+    font-family: 'Kanit', sans-serif;
+}
+.st-ax {
+    font-family: 'Kanit', sans-serif;
+}
+
+
+/* button */
+/* button กรอบนอก */
+.st-emotion-cache-1vt4y43 {
+    background-color: #3498db; 
+    color: white; 
+    border: none; 
+    border-radius : 12px; 
+    padding: 0.5rem 1rem; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: none;
+}
+
+.st-emotion-cache-1vt4y43 :active {
+    background-color: #3498db; 
+}
+
+.st-emotion-cache-1vt4y43 :hover {
+    background-color: #3498db; 
+}
+
+/* button กรอบใน */
+.st-emotion-cache-12h5x7g.e1nzilvr5 {
+    background-color: #3498db; /* สีฟ้าธรรมดา */
+    color: white; /* สีข้อความเป็นสีขาว */
+    border: none; /* เอากรอบออก */
+    border-radius: 10px; /* ขอบมน */
+    padding: 0.5rem 1rem; /* ระยะห่างข้างใน */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    
+}
+
+/* ไม่เปลี่ยนสีเมื่อเมาส์ไปจ่อ */
+.st-emotion-cache-12h5x7g.e1nzilvr5:hover {
+    background-color: #3498db; /* รักษาสีฟ้าธรรมดาไว้ */
+}
+
+/* กรอบใหญ่ */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    border: 2px solid #ffffff;  /* กำหนดสีกรอบ */
+    padding: 10px;              /* ระยะห่างภายในกรอบ */
+    border-radius: 8px;         /* ขอบกรอบให้มน */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* เงากรอบ */
+} 
+
+
+.st-da {
+    background: linear-gradient(to right, #4b93ff 0%, rgb(75, 159, 255) 100%, rgba(151, 166, 195, 0.25) 100%, rgba(151, 166, 195, 0.25) 100%);
+}
+.st-df {
+    background: linear-gradient(to right, rgb(75, 159, 255) 0%, rgb(75, 159, 255) 75%, rgba(151, 166, 195, 0.25) 75%, rgba(151, 166, 195, 0.25) 100%);
+}
+.st-dg {
+    background: linear-gradient(to right, rgb(75, 159, 255) 0%, rgb(75, 159, 255) 50%, rgba(151, 166, 195, 0.25) 50%, rgba(151, 166, 195, 0.25) 100%);
+}
+.st-dh {
+    background: linear-gradient(to right, rgb(75, 159, 255)0%, rgb(75, 159, 255) 25%, rgba(151, 166, 195, 0.25) 25%, rgba(151, 166, 195, 0.25) 100%);
+}
+
+.st-emotion-cache-1dj3ksd {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(75, 159, 255);
+    border-radius: 100%;
+    border-style: none;
+    box-shadow: none;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 0.75rem;
+    width: 0.75rem;
+}
+.st-emotion-cache-10y5sf6 {
+    color: rgb(46, 101, 163);
+}
+
+/* output */
