@@ -5,12 +5,11 @@ import streamlit as st
 with open("style.css", encoding="UTF-8") as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-
 insurance_products = pd.read_excel('product.xlsx')
-st.markdown(f"""<div><p> เว็บไซต์ประเมินกรมธรรม์ประกันการเดินทาง </p></div>""", unsafe_allow_html=True)
+
 st.title("InsureMe")
 st.subheader("คัดสรรห์แผนประกันการเดินทางที่เหมาะกับคุณ")
-st.markdown(f"""<div><h5>กรุณากรอกข้อมูลเพื่อค้นหาแผนประกัน</h5></div>""", unsafe_allow_html=True)
+st.markdown("<b>กรุณากรอกข้อมูลเพื่อค้นหาแผนประกัน</b>", unsafe_allow_html=True)
 # input
 customers = {}
 name = st.text_input("กรุณากรอกชื่อของคุณ ")
