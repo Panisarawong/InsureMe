@@ -5,7 +5,10 @@
 h1, h3, p, h5 {
     font-family: 'Kanit', sans-serif;
 }
-.st-emotion-cache-1104ytp h1, h3 {
+.st-emotion-cache-1104ytp h1{
+    font-family: 'Kanit', sans-serif;
+}
+.st-emotion-cache-1104ytp h3{
     font-family: 'Kanit', sans-serif;
 }
 .st-ax {
