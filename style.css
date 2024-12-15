@@ -19,7 +19,7 @@ h1, h3, p, h5 {
 
 /* button */
 /* button กรอบนอก */
-.st-emotion-cache-1vt4y43 {
+.st-emotion-cache-ocsh0s {
     background-color: #3498db; 
     color: white; 
     border: none; 
@@ -30,16 +30,16 @@ h1, h3, p, h5 {
     transition: none;
 }
 
-.st-emotion-cache-1vt4y43 :active {
+.st-emotion-cache-ocsh0s:active {
     background-color: #3498db; 
 }
 
-.st-emotion-cache-1vt4y43 :hover {
+.st-emotion-cache-ocsh0s :hover {
     background-color: #3498db; 
 }
 
 /* button กรอบใน */
-.st-emotion-cache-12h5x7g.e1nzilvr5 {
+.st-emotion-cache-1hyd1ho p {
     background-color: #3498db; /* สีฟ้าธรรมดา */
     color: white; /* สีข้อความเป็นสีขาว */
     border: none; /* เอากรอบออก */
