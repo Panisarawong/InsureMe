@@ -87,7 +87,17 @@ div[data-testid="stVerticalBlockBorderWrapper"] {
 .st-emotion-cache-10y5sf6 {
     color: rgb(46, 101, 163);
 }
-.st-emotion-cache-10y5sf6 {
+
+.st-emotion-cache-1373cj4 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 14px;
     color: rgb(46, 101, 163);
-    
+    top: -1.6em;
+    position: absolute;
+    white-space: nowrap;
+    background-color: transparent;
+    line-height: 1.6;
+    font-weight: 400;
+    pointer-events: none;
+}
 /* output */
