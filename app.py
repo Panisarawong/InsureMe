@@ -74,7 +74,13 @@ def calculate_matches(customers, filtered):
             for criteria in ['advance_payment', 'onsite_service', 'online_service', 'baggage_coverage',
                              'home_coverage', 'flight_delay', 'add_on_option', 'visa_rejection']:
                 if criteria in product_coverage.index:
-                    criteria_score += c_attrs[criteria] * product_coverage[criteria]
+                    # แยกการคำนวณตามคะแนนที่ผู้ใช้ระบุ
+                    if c_attrs[criteria] in [1, 2]:  # ผู้ใช้ให้ความสำคัญน้อย
+                        if product_coverage[criteria] == 0:  # เงื่อนไขไม่ครอบคลุม
+                            criteria_score += c_attrs[criteria]
+                    elif c_attrs[criteria] in [3, 4, 5]:  # ผู้ใช้ให้ความสำคัญมาก
+                        if product_coverage[criteria] == 1:  # เงื่อนไขครอบคลุม
+                            criteria_score += c_attrs[criteria]
 
             # รวมคะแนนทั้งหมด 
             total_score = criteria_score
