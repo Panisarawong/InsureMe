@@ -71,28 +71,29 @@ def calculate_matches(customers, filtered):
 
             # คะแนนจากเงื่อนไข
             criteria_score = 0
+            matching_conditions_count = 0  # นับจำนวนเงื่อนไขที่ตรงกับคะแนนความสำคัญสูงสุด
+
             for criteria in ['advance_payment', 'onsite_service', 'online_service', 'baggage_coverage',
                              'home_coverage', 'flight_delay', 'add_on_option', 'visa_rejection']:
                 if criteria in product_coverage.index:
-                    # แยกการคำนวณตามคะแนนที่ผู้ใช้ระบุ
-                    if c_attrs[criteria] in [1, 2]:  # ผู้ใช้ให้ความสำคัญน้อย
-                        if product_coverage[criteria] == 0:  # เงื่อนไขไม่ครอบคลุม
-                            criteria_score += c_attrs[criteria]
-                    elif c_attrs[criteria] in [3, 4, 5]:  # ผู้ใช้ให้ความสำคัญมาก
-                        if product_coverage[criteria] == 1:  # เงื่อนไขครอบคลุม
-                            criteria_score += c_attrs[criteria]
+                    score = c_attrs[criteria] * product_coverage[criteria]
+                    criteria_score += score
 
-            # รวมคะแนนทั้งหมด 
-            total_score = criteria_score
-            
-            # เพิ่มผลลัพธ์พร้อมคะแนน
-            matches.append((customer, product_index, total_score))
+                    # นับจำนวนเงื่อนไขที่ตรงกับคะแนนความสำคัญสูงสุดของผู้ใช้
+                    if c_attrs[criteria] in [3, 4, 5]:  # คะแนนความสำคัญ 3-5
+                        if product_coverage[criteria] == 1:  # ครอบคลุม
+                            matching_conditions_count += 1
+                    elif c_attrs[criteria] in [1, 2]:  # คะแนนความสำคัญ 1-2
+                        if product_coverage[criteria] == 0:  # ไม่ครอบคลุม
+                            matching_conditions_count += 1
 
-    # จัดเรียงตามคะแนน (จากมากไปน้อย)
-    matches = sorted(matches, key=lambda x: x[2], reverse=True)
+            # เพิ่มผลลัพธ์พร้อมคะแนนและจำนวนเงื่อนไขที่ตรงกัน
+            matches.append((customer, product_index, criteria_score, matching_conditions_count))
+
+    # จัดเรียงตามคะแนนรวม (จากมากไปน้อย) และหากคะแนนเท่ากัน, เลือกแผนที่ตรงกับเงื่อนไขมากที่สุด
+    matches = sorted(matches, key=lambda x: (x[2], x[3]), reverse=True)
     
     return matches
-
 # แสดงผลลัพธ์
 if st.button("ค้นหาประกันที่เหมาะสม"):
     if filtered.empty:
