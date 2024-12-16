@@ -106,9 +106,9 @@ if st.button("ค้นหาประกันที่เหมาะสม"):
         else:
             st.write("\n### แผนประกันการเดินทางที่เหมาะกับคุณ")
             cols = st.columns(3)
-            top_3_matches = matches[:3] 
+            top_3_matches = matches[:3]  # เลือกแค่ 3 อันดับแรก
 
-            for i, (customer, product_index, score) in enumerate(top_3_matches):
+            for i, (customer, product_index, score, matching_count) in enumerate(top_3_matches):
                 product_name = filtered.loc[product_index, 'name']
                 price = filtered.loc[product_index, 'price']
                 type = filtered.loc[product_index, 'type']
@@ -120,6 +120,7 @@ if st.button("ค้นหาประกันที่เหมาะสม"):
                             <p>ประกันการเดินทาง <b>{type} </b></p>
                             <p>ค่าเบี้ยประกัน <b> {price} บาท</b></p>
                             <p>คะแนนความเหมาะสม <b>{score:.2f}</b></p>
+                            <p>จำนวนเงื่อนไขที่ตรงกับคะแนนความสำคัญ <b>{matching_count}</b></p>
                         </div>
                     """, unsafe_allow_html=True)
 
